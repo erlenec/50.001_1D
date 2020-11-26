@@ -2,4 +2,22 @@
     <string name="app_name">LF</string>
     <string name="login">Lost &amp; Found</string>
     <string name="signup">Dont have an account yet? Sign up</string>
+
+    <!-- ItemEntry keys in database -->
+    <string name="item_node_key">items</string>
+    <string name="item_username">username</string>
+    <string name="item_item">item</string>
+    <string name="item_location">location</string>
+    <string name="item_status">status</string>
+    <string name="item_description">description</string>
+    <string name="item_date_created">date_created</string>
+    <string name="item_date_updated">date_updated</string>
+    <string name="item_imagePath">imagePath</string>
+    <!-- User keys in database -->
+    <string name="user_node_key">users</string>
+    <string name="user_username">username</string>
+    <string name="user_password">password</string>
+    <string name="user_image">userImagePath</string>
+
+
 </resources>
