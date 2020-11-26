@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LF</string>
+    <string name="login">Lost &amp; Found</string>
+    <string name="signup">Dont have an account yet? Sign up</string>
+</resources>
