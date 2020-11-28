@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class SignupActivity extends AppCompatActivity {
@@ -33,9 +34,11 @@ public class SignupActivity extends AppCompatActivity {
 
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
-
         buttonLogIn = findViewById(R.id.buttonBackLogIn);
         buttonSignUp = findViewById(R.id.buttonSignUpNow);
+
+        mRootDatabaseRef = FirebaseDatabase.getInstance().getReference();
+        mNodeRefUsers = mRootDatabaseRef.child(getString(R.string.user_node_key));
 
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +51,28 @@ public class SignupActivity extends AppCompatActivity {
                 else if (passwordInput.isEmpty()) {
                     Toast.makeText(SignupActivity.this, R.string.error_empty_password, Toast.LENGTH_SHORT).show();
                 }
+                else {
+                    mNodeRefUsers.orderByChild(getString(R.string.user_username)).equalTo(usernameInput).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.getChildrenCount() == 0) {
+                                User.UserBuilder userBuilder = new User.UserBuilder().setPassword(passwordInput).setUsername(usernameInput);
+                                User user = userBuilder.build();
+                                mNodeRefUsers.push().setValue(user);
+                                Toast.makeText(SignupActivity.this, R.string.successful_sign_up, Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(SignupActivity.this, R.string.error_username_exists, Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+                }
 
 
                 }
@@ -58,11 +83,9 @@ public class SignupActivity extends AppCompatActivity {
         buttonLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO: set correct intent
                 Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
-
         });
     }
 }

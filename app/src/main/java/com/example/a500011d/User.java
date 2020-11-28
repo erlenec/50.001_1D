@@ -32,24 +32,14 @@ public class User {
         this.userImagePath = userImagePath;
     }
 
-    public boolean validate(String input) {
-        return input.equals(this.password);
-    }
+    public String getUsername() { return this.username; }
+
+    public String getPassword() { return this.password; }
+
+    public boolean validate(String input) { return input.equals(this.password); }
 
     public void updatePassword(String password) {
         this.password = password;
-    }
-
-    /*
-        Convert object to Map to push to database use mNodeRefUsers.push().setValue(user.getMap(MainActivity.this));
-     */
-    @Exclude
-    public Map<String, Object> getMap(Context context) {
-        HashMap<String, Object> res = new HashMap<>();
-        res.put(context.getString(R.string.user_username), this.username);
-        res.put(context.getString(R.string.user_password), this.password);
-        res.put(context.getString(R.string.user_image), this.userImagePath);
-        return res;
     }
 
     static class UserBuilder {
