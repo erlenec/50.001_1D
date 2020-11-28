@@ -4,27 +4,30 @@
     <string name="signup">Dont have an account yet? Sign up</string>
 
     <!-- START: ItemEntry keys in database -->
-    <string name="item_node_key">items</string>
-    <string name="item_username">username</string>
-    <string name="item_item">item</string>
-    <string name="item_location">location</string>
-    <string name="item_status">status</string>
-    <string name="item_description">description</string>
-    <string name="item_date_created">date_created</string>
-    <string name="item_date_updated">date_updated</string>
-    <string name="item_imagePath">imagePath</string>
+    <string name="item_node_key" translatable="false">items</string>
+    <string name="item_username" translatable="false">username</string>
+    <string name="item_item" translatable="false">item</string>
+    <string name="item_location" translatable="false">location</string>
+    <string name="item_status" translatable="false">status</string>
+    <string name="item_description" translatable="false">description</string>
+    <string name="item_date_created" translatable="false">date_created</string>
+    <string name="item_date_updated" translatable="false">date_updated</string>
+    <string name="item_imagePath" translatable="false">imagePath</string>
     <!-- END: ItemEntry keys in database -->
     <!-- START: User keys in database -->
-    <string name="user_node_key">users</string>
-    <string name="user_username">username</string>
-    <string name="user_password">password</string>
-    <string name="user_image">userImagePath</string>
+    <string name="user_node_key" translatable="false">users</string>
+    <string name="user_username" translatable="false">username</string>
+    <string name="user_password" translatable="false">password</string>
+    <string name="user_image" translatable="false">userImagePath</string>
     <!-- END: User keys in database -->
-    <!-- START: Log in errors -->
+    <!-- START: Log in/Sign up errors -->
     <string name="error_empty_username">Please enter your Username</string>
     <string name="error_empty_password">Please enter your password</string>
     <string name="error_user_not_found">Username not found</string>
     <string name="error_wrong_password">Incorrect password</string>
-    <!-- END: Log in errors -->
+    <string name="error_username_exists">Username already exists. Please choose a different one</string>
+    <!-- END: Log in/Sign up errors -->
+    <string name="successful_sign_up">Successful sign up! Log in with these credentials</string>
+
 
 </resources>
