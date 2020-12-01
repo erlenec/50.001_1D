@@ -2,7 +2,10 @@ package com.example.a500011d;
 
 import androidx.annotation.Nullable;
 
+import com.google.firebase.database.Exclude;
+
 public class ItemEntry {
+    @Exclude public String databaseId;
     private String username;
     private Status status;
     private String date_created;
@@ -41,7 +44,8 @@ public class ItemEntry {
         // necessary to pull data from firebase
     }
 
-    public ItemEntry(String username, Status status, String item, String location, String description, @Nullable String imagePath) {
+    public ItemEntry(String databaseId, String username, Status status, String item, String location, String description, @Nullable String imagePath) {
+        this.databaseId = databaseId;
         this.username = username;
         this.item = item;
         this.status = status;
@@ -52,6 +56,7 @@ public class ItemEntry {
     }
 
     private ItemEntry(ItemEntryBuilder itemEntryBuilder) {
+        this.databaseId = itemEntryBuilder.databaseId;
         this.username = itemEntryBuilder.username;
         this.item = itemEntryBuilder.item;
         this.status = itemEntryBuilder.status;
@@ -99,6 +104,7 @@ public class ItemEntry {
 
     // IDK if yall wanna use builder design pattern when creating new Entry instead so here it is
     static class ItemEntryBuilder {
+        private String databaseId;
         private String username;
         private Status status;
         private String item;
@@ -107,6 +113,11 @@ public class ItemEntry {
         @Nullable private String imagePath;
 
         ItemEntryBuilder() {}
+
+        public ItemEntryBuilder setDatabaseId(String databaseId) {
+            this.databaseId = databaseId;
+            return this;
+        }
 
         public ItemEntryBuilder setUsername(String username) {
             this.username = username;

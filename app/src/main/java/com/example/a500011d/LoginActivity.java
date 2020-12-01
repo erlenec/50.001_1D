@@ -63,7 +63,8 @@ public class LoginActivity extends AppCompatActivity {
                                 User compareUser = ds.getValue(User.class);
                                 if (compareUser.validate(passwordInput)) {
                                     // TODO: set correct intent
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, PostingActivity.class);
+                                    intent.putExtra(getString(R.string.username_intent), usernameInput);
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(LoginActivity.this, R.string.error_wrong_password, Toast.LENGTH_SHORT).show();

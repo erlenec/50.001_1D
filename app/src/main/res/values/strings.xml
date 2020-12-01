@@ -3,6 +3,9 @@
     <string name="login">Lost &amp; Found</string>
     <string name="signup">Dont have an account yet? Sign up</string>
 
+    <string name="sign_up_message">Sign Up</string>
+    <string name="login_message">Back to Log In</string>
+
     <!-- START: ItemEntry keys in database -->
     <string name="item_node_key" translatable="false">items</string>
     <string name="item_username" translatable="false">username</string>
@@ -29,5 +32,9 @@
     <!-- END: Log in/Sign up errors -->
     <string name="successful_sign_up">Successful sign up! Log in with these credentials</string>
 
+    <!-- START: Posting Activity -->
+    <string name="posting_title">Posting Page</string>
+    <string name="username_intent" translatable="false">username</string>
+    <string name="error_empty_compulsory">Item and Description fields cannot be empty</string>
 
 </resources>
