@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f1f0"
+    tools:context=".ChatActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="70mm"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/ChatText"
+                android:layout_width="match_parent"
+                android:layout_height="70mm"
+                android:layout_gravity="center"
+                android:fontFamily="@font/patrick_hand"
+                android:text="\n"
+                android:textColor="#666e66"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </ScrollView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:backgroundTint="@color/white"
+        android:padding="15dp">
+        <EditText
+            android:id="@+id/editTextValue"
+            android:background="@android:color/transparent"
+            android:hint="Enter text here"
+            android:textColorHint="#f0f1f0"
+            android:gravity="left"
+            android:inputType= "textAutoCorrect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/SPACE6"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/SendButton"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:background="@drawable/right_arrow"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758"
+        app:layout_constraintWidth_percent="0.7" />
+
+
+    <TextView
+        android:id="@+id/SPACE5"
+
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:layout_gravity="center"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/RefButton"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:background="@drawable/refresh"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758"
+        app:layout_constraintWidth_percent="0.7" />
+
+
+
+</LinearLayout>

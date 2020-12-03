@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "222944652852",
+    "firebase_url": "https://lostandfound-ecfbc.firebaseio.com",
+    "project_id": "lostandfound-ecfbc",
+    "storage_bucket": "lostandfound-ecfbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222944652852:android:5ea94f72d66d469d35e461",
+        "android_client_info": {
+          "package_name": "com.example.a1dchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222944652852-gsf8ja3onemqo91a2bl9obpcivlgcich.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4B8tIy5JRMFfZMISb81hqSat1Ry7zqus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222944652852-gsf8ja3onemqo91a2bl9obpcivlgcich.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
