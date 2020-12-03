@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">LF</string>
+    <string name="login">Lost &amp; Found</string>
+    <string name="signup">Dont have an account yet? Sign up</string>
+
+    <string name="sign_up_message">Sign Up</string>
+    <string name="login_message">Back to Log In</string>
+
+    <!-- START: ItemEntry keys in database -->
+    <string name="item_node_key" translatable="false">items</string>
+    <string name="item_username" translatable="false">username</string>
+    <string name="item_item" translatable="false">item</string>
+    <string name="item_location" translatable="false">location</string>
+    <string name="item_status" translatable="false">status</string>
+    <string name="item_description" translatable="false">description</string>
+    <string name="item_date_created" translatable="false">date_created</string>
+    <string name="item_date_updated" translatable="false">date_updated</string>
+    <string name="item_imagePath" translatable="false">imagePath</string>
+    <!-- END: ItemEntry keys in database -->
+    <!-- START: User keys in database -->
+    <string name="user_node_key" translatable="false">users</string>
+    <string name="user_username" translatable="false">username</string>
+    <string name="user_password" translatable="false">password</string>
+    <string name="user_image" translatable="false">userImagePath</string>
+    <!-- END: User keys in database -->
+    <!-- START: Log in/Sign up errors -->
+    <string name="error_empty_username">Please enter your Username</string>
+    <string name="error_empty_password">Please enter your password</string>
+    <string name="error_user_not_found">Username not found</string>
+    <string name="error_wrong_password">Incorrect password</string>
+    <string name="error_username_exists">Username already exists. Please choose a different one</string>
+    <!-- END: Log in/Sign up errors -->
+    <string name="successful_sign_up">Successful sign up! Log in with these credentials</string>
+
+    <!-- START: Posting Activity -->
+    <string name="posting_title">Posting Page</string>
+    <string name="username_intent" translatable="false">username</string>
+    <string name="error_empty_compulsory">Item and Description fields cannot be empty</string>
+    <string name="file_not_found">File not found</string>
+
+</resources>
