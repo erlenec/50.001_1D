@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">LF</string>
     <string name="login">Lost &amp; Found</string>
-    <string name="signup">Dont have an account yet? Sign up</string>
+    <string name="signup">Don\'t have an account yet? Sign up</string>
 
-    <string name="sign_up_message">Sign Up</string>
+    <string name="sign_up_message">Sign up to join our Lost and Found community!</string>
     <string name="login_message">Back to Log In</string>
 
     <!-- START: ItemEntry keys in database -->
